@@ -7,10 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    if (username === "admin" & password === ) {
-
-    } else {
-
+    if (request.getMethod().equalsIgnoreCase("POST")) {
+        String username = (request.getParameter("username") != null) ? request.getParameter("username") : "";
+        String password = (request.getParameter("password") != null) ? request.getParameter("password") : "";
+        if (username.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")) {
+            response.sendRedirect("/profile.jsp");
+        } else {
+            response.sendRedirect("/login.jsp");
+        }
     }
 %>
 
