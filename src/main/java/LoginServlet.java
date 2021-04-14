@@ -7,7 +7,6 @@ import java.io.IOException;
 
 
 //TODO: Lock down your profile page
-//
 //        Ensure that users can only visit the /profile page if they are logged in
 //        In your LoginServlet, when a user successfully logs in, set a key named "user" in the session
 //        Use this key to redirect unauthorized users that try to visit the /profile page
